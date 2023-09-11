@@ -1,0 +1,99 @@
+<div class="card-row">
+  <div *ngFor="let offre of offres" class="offer-card">
+    <mat-card>
+      <mat-card-content>
+        <img [src]="offre.image" alt="Offre Image">
+        <div class="card-info">
+          <h2 class="card-title thick">{{offre.titre}}</h2>
+          <br>
+          <br>
+          <br>
+
+          <p class="card-content titre"> <strong> Description:</strong> {{offre.description}}</p>
+          <p class="card-content titre"><strong> Lieu: </strong>{{offre.lieu}}</p>
+          <p class="card-subtitle titre"><strong> Nombre de Places:</strong> {{offre.nombreplaces}}</p>
+          <p class="card-subtitle titre"><strong> Deadline: </strong>{{offre.deadline}}</p>
+          <button class="button desc" style="vertical-align:middle" ><span><a  [href]="offre.link" target="_blank"><strong style="color: black;"> Link</strong></a>
+          </span></button>
+        </div>
+        
+      </mat-card-content>
+      
+      <mat-card-actions class="card-actions">
+        <div >
+        <button class="btn btn-primary" style="border-radius: 8px;" (click)="deleteoffers(offre.idOffre)">Supprimer</button>
+      </div>
+        <!--button class="btn btn-primary" style="border-radius: 8px;" (click)="GetInfos(offre.idOffre)">Update</button-->
+        <ul></ul>
+        <button  class="btn btn-success botton animation"  style="border-radius: 8px;" (click)="redirectToTopCandidatures(offre)">Top Candidature</button>
+        <ul></ul>
+
+        <button class="btn btn-warning" style="border-radius: 8px;" (click)="toggleUpdateForm(offre)">Update</button>
+
+      </mat-card-actions>
+      
+    </mat-card>
+    
+  </div>
+  <div *ngIf="showUpdateForm" class="update-form-container">
+    <h3>Update User Information</h3>
+    <form>
+      <!-- Add form fields for updating user information here -->
+      <input  type="file" id="fileInput" (change)="handleFileInput($event)" accept=".jpg, .png">
+  
+      <div class="form-floating mb-3">
+             
+        <div class="col-12">
+          <div class="form-floating">
+            <input required type="text" [(ngModel)]="updatedOffre.titre"name="titre"id="titre"class="form-control bg-white"style="height: 100px" />        
+                        
+          <label for="message" class="thick">Titre d'Offre</label>
+          </div>
+      
+        </div>
+  
+      <div class="col-12">
+        <div class="form-floating">
+          <input  required type="text" [(ngModel)]="updatedOffre.description"    name="description" id="description" class="form-control bg-white" style="height: 100px"    />
+          <label class="thick">Offre Description</label>
+        </div>
+      </div>
+  
+      <div class="col-12">
+          <div class="form-floating">
+            <input  required type="text" [(ngModel)]="updatedOffre.lieu"  name="lieu" id="lieu" class="form-control bg-white" style="height: 100px"  />
+            <label for="message" class="thick">Lieu d'Offre</label>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="form-floating">
+            <input class="form-control bg-transparent"  required type="date" [(ngModel)]="updatedOffre.deadline" name="deadline" id="deadline" />
+            <label class="thick">deadline:</label>
+            <div class="status" id="status"></div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="form-floating">
+            <input required type="number"  [(ngModel)]="updatedOffre.nombreplaces" name="nombreplaces" id="nombreplaces" class="form-control bg-white" style="height: 100px"  />
+            <label for="message" class="thick">Nombre De Places</label>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="form-floating">
+            <input required type="text"  [(ngModel)]="updatedOffre.link" name="link" id="link" class="form-control bg-white" style="height: 100px"  />
+            <label for="message" class="thick">Lien d'Offre</label>
+          </div>
+        </div>
+  
+  
+  
+  </div>
+      <button class="btn btn-warning" style="border-radius: 8px;" (click)="updateOffreInfo(updatedOffre)">Update</button>
+      <button class="btn btn-primary" style="border-radius: 8px;" (click)="cancelUpdate()">Cancel</button>
+  
+    </form>
+    
+  </div>
+  
+  
+</div>

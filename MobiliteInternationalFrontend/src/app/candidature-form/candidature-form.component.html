@@ -1,0 +1,119 @@
+
+ 
+<div class="bg-white rounded p-4 p-sm-5 my-4 mx-3 form-container">
+
+
+  <!-- Sign Up Start -->
+  <form (ngSubmit)="submitCandidatureForm()" id="feedback-form">
+  <div class="container-fluid">
+    <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
+        <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+            <div class="bg-white rounded p-4 p-sm-5 my-4 mx-3">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+
+                        <h3 class=" titre">Candidature</h3>
+                 
+                 
+                </div>
+          
+               <div class="form-floating mb-3">
+             
+                    <input type="text" class="form-control"  [(ngModel)]="candidatureData.nomComplet"  name="FirstName" id="message"  style="height: 100px">
+                    <label for="floatingText">Nom et Prenom</label>
+                </div>
+                     <div class="form-floating mb-3">
+             
+                    <input type="text" class="form-control"  [(ngModel)]="candidatureData.identifiant"  name="FirstName" id="message"  style="height: 100px">
+                    <label for="floatingText">identifiant</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" [(ngModel)]="candidatureData.email" name="email" id="message"  placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                </div>         
+                <div class="form-floating mb-3">
+                        <select required [(ngModel)]="candidatureData.gerne" name="genre" id="name" class="form-control bg-transparent">
+                           <option value="Féminin">Féminin</option>
+    <option value="Masculin">Masculin</option>
+  </select>
+<label for="name">Genre</label>
+                </div> 
+                <div class="form-floating mb-3">
+<input required type="date" [(ngModel)]="candidatureData.dateNaissance" name="Description" id="message" class="form-control bg-transparent" style="height: 100px"  />
+<label for="message">Date de Naissance</label>
+</div>
+<div class="form-floating mb-3">
+<input required type="text" [(ngModel)]="candidatureData.classe" name="Description" id="message" class="form-control bg-transparent" style="height: 100px"  />
+<label for="message">Classe</label>
+</div>
+<div class="form-floating mb-3">
+<input required type="number" min="0" max="20" [(ngModel)]="candidatureData.moy3" name="Description" id="message" class="form-control bg-white" style="height: 100px"  />
+<label for="message" class="thick">Moyenne 3éme Anneé </label>
+</div>
+<div class="form-floating mb-3">
+<input required type="number" min="0" max="20" [(ngModel)]="candidatureData.moy2" name="Description" id="message" class="form-control bg-white" style="height: 100px"  />
+<label for="message" class="thick">Moyenne 2éme Anneé </label>
+</div>
+            <div class="form-floating mb-3">
+<input required type="number" min="0" max="20" [(ngModel)]="candidatureData.moy1" name="Description" id="message" class="form-control bg-white" style="height: 100px"  />
+<label for="message" class="thick">Moyenne 1éme Anneé </label>
+</div>
+<div class="form-floating mb-3">
+<select required [(ngModel)]="candidatureData.francais" name="sub" id="name" class="form-control bg-transparent">
+    <option value="A1">A1</option>
+    <option value="A2">A2</option>
+    <option value="B1">B1</option>
+    <option value="B2">B2</option>
+    <option value="C1">C1</option>
+    <option value="C2">C2</option>
+    <option value="Null">Null</option>
+  </select>
+<label for="name">Niveau Francais</label>
+</div>
+<div class="form-floating mb-3">
+<select required [(ngModel)]="candidatureData.anglais" name="sub" id="name" class="form-control bg-transparent">
+    <option value="A1">A1</option>
+    <option value="A2">A2</option>
+    <option value="B1">B1</option>
+    <option value="B2">B2</option>
+    <option value="C1">C1</option>
+    <option value="C2">C2</option>
+    <option value="Null">Null</option>
+  </select>
+<label for="name">Niveau Anglais</label>
+</div>
+<div class="form-floating mb-3">
+<select required [(ngModel)]="candidatureData.option" name="specialite" id="specialite" class="form-control bg-transparent">
+    <option value="ERPBI">ERPBI</option>
+    <option value="arcTIC">arcTIC</option>
+    <option value="SAE">SAE</option>
+    <option value="SIM">SIM</option>
+    <option value="SLEAM">SLEAM</option>
+    <option value="NIDS">NIDS</option>
+    <option value="NIDS">TWIN</option>
+    <option value="InFini">InFini</option>
+    <option value="DataScience">DataScience</option>
+    <option value="SE">SE</option>
+    <option value="IoSyS">IoSyS</option>
+    <option value="Wins">Wins</option>
+    <option value="OGI">OGI</option>
+    <option value="Mecatrononique">Mecatrononique</option>
+    <option value="StructureOuvrage">StructureOuvrage</option>
+    <option value="PontsEtchaussées">PontsEtchaussées</option>
+    <option value="RessourcesNaturellesEtétudesEnergétique">RessourcesNaturellesEtétudesEnergétique</option>
+    <option value="Autre">Autre</option>
+
+  </select>
+<label for="name">specialite</label>
+</div>
+                
+                <button class="btn btn-danger py-3 w-100 mb-4" type="submit"[disabled]="!selectedOffer">Submit Candidature</button>
+               
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+<!-- Sign Up End -->
+
+
+

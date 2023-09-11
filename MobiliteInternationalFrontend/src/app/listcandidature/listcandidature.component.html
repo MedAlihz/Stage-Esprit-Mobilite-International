@@ -1,0 +1,36 @@
+<div class="card-row">
+    <div *ngFor="let candidature of candidatures" class="offer-card">
+      <mat-card>
+        <mat-card-content>
+          
+          <div class="card-info">
+            <h2 class="card-title thick">Id: {{candidature.idCandidature}}</h2>
+            <h2 class="card-title thick">Nom et Prénom: {{candidature.nomComplet}}</h2>
+            <p class="card-content titre">Identifiant: {{candidature.identifiant}}</p>
+            <p class="card-content titre">Email: {{candidature.email}}</p>
+            <p class="card-content titre">Sexe : {{candidature.gerne}}</p>
+            <p class="card-content titre">Date de Naissance: {{candidature.dateNaissance}}</p>
+            <p class="card-content titre">classe: {{candidature.classe}}</p>
+            <p class="card-content titre">Moyenne 3éme : {{candidature.moy3}}</p>
+            <p class="card-content titre">Moyenne 2éme : {{candidature.moy2}}</p>
+            <p class="card-content titre">Moyenne 1re: {{candidature.moy1}}</p>
+            <p class="card-content titre">Niveau Francais: {{candidature.francais}}</p>
+            <p class="card-content titre">Niveau Anglais : {{candidature.anglais}}</p>
+            <p class="card-content titre">Option: {{candidature.option}}</p>
+            <p class="card-subtitle  thick titre">Score: {{candidature.score}}</p>
+
+            
+        </div>
+        </mat-card-content>
+        <mat-card-actions class="card-actions">
+          <button class="btn btn-primary" style="border-radius: 8px;" (click)="deleteoffers(candidature.idCandidature)">Supprimer</button>
+          <li></li>
+          <button class="btn btn-success" style="border-radius: 8px;" (click)="generatePdf(candidature.idCandidature)">DownloadPDF</button>
+
+          <!--button class="btn btn-primary" mat-raised-button color="primary" (click)="redirectToCandidatureForm(offre)">Apply</button-->
+
+   
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>

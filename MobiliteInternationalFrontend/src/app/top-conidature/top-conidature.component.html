@@ -1,0 +1,44 @@
+<div class="button-container">
+  <button class="btn btn-success" style="border-radius: 8px;" mat-raised-button color="primary" (click)="sendEmails()">Envoyer Email Resultat</button>
+
+</div>
+<div *ngIf="loading; else dataContent">
+  <!-- Display a loading message or spinner while data is being fetched -->
+  <p>Loading...</p>
+</div>
+
+<ng-template #dataContent>
+  <!-- Display the top candidature data if available -->
+  <tr *ngFor="let topCandidature of topCandidatures">
+   
+  <mat-card>
+    <mat-card-content>
+      
+      <div class="card-info">
+        <h2 class="card-content titre" style="color: black;">Nom Complet: {{topCandidature.nomComplet}}</h2>
+        <p class="card-content titre">Identifiant: {{topCandidature.identifiant}}</p>
+        <p class="card-content titre">Email: {{topCandidature.email}}</p>
+        <p class="card-content titre">Sexe : {{topCandidature.gerne}}</p>
+        <p class="card-content titre">Date de Naissance: {{topCandidature.dateNaissance}}</p>
+        <p class="card-content titre">classe: {{topCandidature.classe}}</p>
+        <p class="card-content titre">Moyenne 3éme : {{topCandidature.moy3}}</p>
+        <p class="card-content titre">Moyenne 2éme : {{topCandidature.moy2}}</p>
+        <p class="card-content titre">Moyenne 1re: {{topCandidature.moy1}}</p>
+        <p class="card-content titre">Niveau Francais: {{topCandidature.francais}}</p>
+        <p class="card-content titre">Niveau Anglais : {{topCandidature.anglais}}</p>
+        <p class="card-content titre">Option: {{topCandidature.option}}</p>
+
+        <p class="card-subtitle  thick titre">Score: {{topCandidature.score}}</p>
+
+    </div>
+    </mat-card-content>
+    <mat-card-actions class="card-actions">
+        <!--button class="btn btn-primary" mat-raised-button color="primary" (click)="redirectToCandidatureForm(offre)">Apply</button-->
+<!-- Example button triggering the redirectToCandidatureForm function -->
+
+    </mat-card-actions>
+  </mat-card>
+</tr>
+  <!-- Display an error message if an error occurred during data retrieval -->
+  <p *ngIf="error" style="color: red;">{{ error }}</p>
+</ng-template>

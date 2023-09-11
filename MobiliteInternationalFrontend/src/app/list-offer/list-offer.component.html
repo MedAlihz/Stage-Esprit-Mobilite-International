@@ -1,0 +1,24 @@
+<div class="card-row">
+    <div *ngFor="let offre of offres" class="offer-card">
+      <mat-card>
+        <mat-card-content>
+          <img [src]="offre.image" alt="Offre Image">
+          <div class="card-info">
+            <h2 class="card-title desc">{{offre.titre}}</h2>
+            <p class="card-content titre">Description: {{offre.description}}</p>
+            <p class="card-content titre">Lieu: {{offre.lieu}}</p>
+            <p class="card-subtitle titre">Nombre de Places: {{offre.nombreplaces}}</p>
+            <p class="card-content titre">Deadline: {{offre.deadline}}</p>
+            <a class="card-subtitle titre" [href]="offre.link" target="_blank">Link</a>
+          </div>
+        </mat-card-content>
+        <mat-card-actions class="card-actions">
+            <!--button class="btn btn-primary" mat-raised-button color="primary" (click)="redirectToCandidatureForm(offre)">Apply</button-->
+<!-- Example button triggering the redirectToCandidatureForm function -->
+            <button  class="btn btn-primary botton" (click)="redirectToCandidatureForm(offre)">Postuler</button>
+          <!--button class="btn btn-primary" style="border-radius: 8px;" (click)="GetInfos(offre.idOffre)">Update</button-->
+  
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>

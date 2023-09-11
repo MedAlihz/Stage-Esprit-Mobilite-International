@@ -1,0 +1,89 @@
+
+    <!-- Contact Start -->
+    <div class="container-xxl py-5 bg-white ">
+        <div class="container">
+          <div class="row g-0">
+            <div class="col-lg-6 wow fadeIn   centerdiv" data-wow-delay="0.1s">
+              <div class="bg-transparent p-5">
+               
+                <h1 class="text-uppercase mb-4 text-center titre">Ajouter Mobilité</h1>
+                
+                <form (ngSubmit)="submitForm()" id="offre-form">
+                  <div class="row g-3">
+                    <label for="images" class="drop-container" id="dropcontainer">
+                        <span class="drop-title">Drop files here</span>
+                        or
+                        <input type="file" id="fileInput" (change)="handleFileInput($event)" accept=".jpg, .png">
+                    </label>
+                    <div class="col-12">
+                        <div class="form-floating">
+                          <input
+                          required
+                          type="text"
+                          [(ngModel)]="titre"
+                          name="titre"
+                          id="titre"
+                          class="form-control bg-white"
+                          style="height: 100px"
+                          [ngClass]="{ 'is-invalid': Form.get('titre').invalid && Form.get('titre').touched }"
+                        />        
+                        <div
+                        *ngIf="Form.get('titre').invalid && Form.get('titre').touched"
+                        class="invalid-feedback"
+                      >
+                        Titre is required.
+                      </div>                  
+                        <label for="message" class="thick">Titre d'Offre</label>
+                        </div>
+                    
+                      </div>
+      
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <input [ngClass]="{ 'is-invalid': Form.get('description').invalid && Form.get('description').touched }" required type="text" [(ngModel)]="description" name="description" id="description" class="form-control bg-white" style="height: 100px"    />
+                        <label class="thick">Offre Description</label>
+                      </div>
+                    </div>
+      
+                    <div class="col-12">
+                        <div class="form-floating">
+                          <input [ngClass]="{ 'is-invalid': Form.get('lieu').invalid && Form.get('lieu').touched }" required type="text" [(ngModel)]="lieu" name="lieu" id="lieu" class="form-control bg-white" style="height: 100px"  />
+                          <label for="message" class="thick">Lieu d'Offre</label>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-floating">
+                          <input class="form-control bg-transparent"  [ngClass]="{ 'is-invalid': Form.get('deadline').invalid && Form.get('deadline').touched }"required type="date" [(ngModel)]="deadline" name="deadline" id="deadline" />
+                          <label class="thick">deadline:</label>
+                          <div class="status" id="status"></div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-floating">
+                          <input required type="number" [ngClass]="{ 'is-invalid': Form.get('nombreplaces').invalid && Form.get('nombreplaces').touched }" [(ngModel)]="nombreplaces" name="nombreplaces" id="nombreplaces" class="form-control bg-white" style="height: 100px"  />
+                          <label for="message" class="thick">Nombre De Places</label>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-floating">
+                          <input required type="text" [ngClass]="{ 'is-invalid': Form.get('link').invalid && Form.get('link').touched }" [(ngModel)]="link" name="link" id="link" class="form-control bg-white" style="height: 100px"  />
+                          <label for="message" class="thick">Lien d'Offre</label>
+                        </div>
+                      </div>
+      
+                    <div class="col-12">
+                      <div class="form-group">
+
+                        <button class="btn btn-primary col-12 " style="border-radius:8px" type="submit" name="submit_reg">Submit</button>
+                                          </div>
+                    </div>
+               
+                </div>
+                </form>
+            </div>
+        </div>
+         
+         
+    </div>
+        
+      </div>

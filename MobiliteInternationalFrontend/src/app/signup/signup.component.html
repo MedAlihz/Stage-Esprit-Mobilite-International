@@ -1,0 +1,54 @@
+
+<div class="bg-light rounded p-4 p-sm-5 my-4 mx-3 form-container">
+
+
+    <!-- Sign Up Start -->
+    <form (ngSubmit)="Register()" id="feedback-form">
+    <div class="container-fluid">
+      <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
+          <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+              <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
+                  <div class="d-flex align-items-center justify-content-between mb-3">
+
+                          <h3 class=" titre">Mobilité Internationale</h3>
+                   
+                   
+                  </div>
+                 <div class="form-floating mb-3">
+               
+                      <input type="text" class="form-control"  [(ngModel)]="User.firstName" name="FirstName" id="message" placeholder="jhondoe">
+                      <label for="floatingText">First Name</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control"  [(ngModel)]="User.lastName" name="lastName"  id="message" placeholder="jhondoe">
+                    <label for="floatingText">Last Name</label>
+                </div>
+                  <div class="form-floating mb-3">
+                      <input type="email" class="form-control" [(ngModel)]="User.email" name="email" id="message"  placeholder="name@example.com">
+                      <label for="floatingInput">Email address</label>
+                  </div>
+                  <div class="form-floating mb-4">
+                      <input type="password" class="form-control" [(ngModel)]="User.password" name="password" id="message" placeholder="Password">
+                      <label for="floatingPassword">Password</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                          <select required [(ngModel)]="User.role" name="role" id="name" class="form-control bg-transparent">
+                          <option value="">--Please select a subject--</option>
+                          <option value="Admin">Admin</option>
+                          <option value="Etudiant">Etudiant</option>
+                        </select>
+                      <label for="name"> Role</label>
+                  </div> 
+                
+                  
+                  <button class="btn btn-danger animation py-3 w-100 mb-4" type="submit" name="submit_reg">Sign Up</button>
+                  <p class="text-center phrase mb-0">Already have an Account? <a href="/Signin">Sign In</a></p>
+              </div>
+          </div>
+      </div>
+  </div>
+</form>
+  <!-- Sign Up End -->
+
+
+

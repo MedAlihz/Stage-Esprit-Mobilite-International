@@ -1,0 +1,16 @@
+<div>
+    <h1>Login</h1>
+    <form (ngSubmit)="GetEmail()">
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="email" name="email" required>
+      </div>
+      <div>
+        <button type="submit">Login</button>
+      </div>
+    </form>
+    <div *ngIf="message">
+      <p>User Role: {{ message }}</p>
+    </div>
+    
+  

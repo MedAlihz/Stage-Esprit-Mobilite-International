@@ -1,0 +1,45 @@
+
+    <!-- Contact Start -->
+    <div class="container-xxl py-5 bg-white ">
+        <div class="container">
+          <div class="row g-0">
+            <div class="col-lg-6 wow fadeIn   centerdiv" data-wow-delay="0.1s">
+              <div class="bg-transparent p-5">
+               
+                <h1 class="text-uppercase mb-4 text-center titre">Ajouter Mobilité</h1>
+                
+                <form (ngSubmit)="submitForm()" id="feedback-form">
+                  <div class="row g-3">
+                 
+                    <div class="col-12">
+                        <div class="form-floating">
+                          <input required type="text" [(ngModel)]="sub" name="sub" id="message" class="form-control bg-white" style="height: 100px"  />
+                          <label for="message" class="thick">Objet de l'Email</label>
+                        </div>
+                      </div>
+      
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <textarea required type="text" [(ngModel)]="text" name="Description" id="message" class="form-control bg-white" style="height: 300px"  ></textarea>
+                        <label class="thick">Text </label>
+                      </div>
+                    </div>
+      
+                   
+      
+                    <div class="col-12">
+                      <div class="form-group">
+
+                        <button class="btn btn-primary col-12 " style="border-radius:8px" type="submit" name="submit_reg">Submit</button>
+                                          </div>
+                    </div>
+               
+                </div>
+                </form>
+            </div>
+        </div>
+         
+         
+    </div>
+        
+      </div>

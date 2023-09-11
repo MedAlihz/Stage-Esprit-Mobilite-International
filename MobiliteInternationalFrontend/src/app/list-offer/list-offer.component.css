@@ -1,0 +1,55 @@
+.thick{
+    color: black;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    height: 100px
+  }
+
+.desc {
+  color: black;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+}
+.botton{
+margin: auto;
+  width: 50%;
+  border: 3px solid black;
+  padding: 10px;
+  border-radius: 10px;
+}
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.offer-card {
+  width: 30%; /* 30% width to show three offers per row */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.offer-card img {
+  width: 200px; /* Adjust the width as needed */
+  height: 200px; /* Make the image square for a big image effect */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  
+}
+
+.card-info {
+  width: 100%;
+}
+
+.card-subtitle.titre {
+  color: red;
+  text-decoration: none;
+}

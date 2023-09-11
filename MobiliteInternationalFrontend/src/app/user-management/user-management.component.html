@@ -1,0 +1,56 @@
+<!-- user-management.component.html -->
+
+<div>
+    <h2>User Management</h2>
+  
+    <!-- Display the list of users -->
+    <ul>
+      <li *ngFor="let user of users">
+        {{ user.idUser }}  {{ user.firstName }} {{ user.lastName }}  {{ user.email }} {{ user.role }}  {{ user.locked }} 
+  
+        <!-- Delete button -->
+        <button class="btn btn-primary" style="border-radius: 8px;"(click)="deleteUser(user.idUser)">Delete</button>
+  
+        <!-- Update button -->
+        <button class="btn btn-warning" style="border-radius: 8px;" (click)="toggleUpdateForm(user)">Update</button>
+      </li>
+    </ul>
+  
+    <!-- Inline Update Form -->
+    <div *ngIf="showUpdateForm">
+      <h3>Update User Information</h3>
+      <form>
+        <!-- Add form fields for updating user information here -->
+     
+        <div class="form-floating mb-3">
+               
+            <input type="text" class="form-control"  [(ngModel)]="updatedUser.firstName" name="firstName" id="message" placeholder="FirstName">
+            <label for="floatingText">First Name</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control"  [(ngModel)]="updatedUser.lastName" name="lastName"  id="message" placeholder="LastName">
+          <label for="floatingText">Last Name</label>
+      </div>
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" [(ngModel)]="updatedUser.email" name="email" id="message"  placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating mb-4">
+            <input type="password" class="form-control" [(ngModel)]="updatedUser.password" name="password" id="message" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+        </div>
+        <div class="form-floating mb-3">
+                <select required [(ngModel)]="updatedUser.role" name="role" id="name" class="form-control bg-transparent">
+                <option value="">--Please select a subject--</option>
+                <option value="Admin">Admin</option>
+                <option value="Etudiant">Etudiant</option>
+              </select>
+            <label for="name"> Role</label>
+        </div> 
+  
+        <button class="btn btn-warning" style="border-radius: 8px;" (click)="updateUserInfo(updatedUser)">Update</button>
+        <button class="btn btn-primary" style="border-radius: 8px;" (click)="cancelUpdate()">Cancel</button>
+      </form>
+    </div>
+  </div>
+  

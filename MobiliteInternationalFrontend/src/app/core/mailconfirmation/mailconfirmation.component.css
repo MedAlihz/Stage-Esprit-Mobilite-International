@@ -1,0 +1,58 @@
+.rollover:hover .rollover-first {
+    max-height:0px!important;
+    display:none!important;
+    }
+    .rollover:hover .rollover-second {
+    max-height:none!important;
+    display:inline-block!important;
+    }
+    .rollover div {
+    font-size:0px;
+    }
+    u ~ div img + div > div {
+    display:none;
+    }
+    #outlook a {
+    padding:0;
+    }
+    span.MsoHyperlink,
+    span.MsoHyperlinkFollowed {
+    color:inherit;
+    mso-style-priority:99;
+    }
+    a.es-button {
+    mso-style-priority:100!important;
+    text-decoration:none!important;
+    }
+    a[x-apple-data-detectors] {
+    color:inherit!important;
+    text-decoration:none!important;
+    font-size:inherit!important;
+    font-family:inherit!important;
+    font-weight:inherit!important;
+    line-height:inherit!important;
+    }
+    .es-desk-hidden {
+    display:none;
+    float:left;
+    overflow:hidden;
+    width:0;
+    max-height:0;
+    line-height:0;
+    mso-hide:all;
+    }
+    .es-header-body a:hover {
+    color:#5d541d!important;
+    }
+    .es-content-body a:hover {
+    color:#5d541d!important;
+    }
+    .es-footer-body a:hover {
+    color:#ffffff!important;
+    }
+    .es-infoblock a:hover {
+    color:#cccccc!important;
+    }
+    .es-button-border:hover > a.es-button {
+    color:#ffffff!important;
+    }
