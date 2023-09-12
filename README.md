@@ -1,7 +1,7 @@
 # A - Clone the project #
  Clone via https : git clone https://github.com/MedAlihz/Stage-Esprit-Mobilite-Internationale.git
 # B - Usage #
-Add Your Send Email Address and Password In the Backend Application Properties :
+Add Your Sender Email Address and Password In the Backend Application Properties :
 spring.mail.username=example@example.com // Email Address 
 
 spring.mail.password=password // Password 
